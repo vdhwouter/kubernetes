@@ -7,4 +7,4 @@ RUN /usr/sbin/a2dismod 'mpm_*' && /usr/sbin/a2enmod mpm_prefork
 EXPOSE 80
 EXPOSE 443
 
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"] 
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
