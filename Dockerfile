@@ -1,8 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Wouter Van den Heede <wouter.vandenheede@student.odisee.be>
 
-VOLUME ["/var/www"]
-
 RUN apt-get update
 RUN apt-get upgrade -y
 
@@ -26,6 +24,8 @@ ADD run /usr/local/bin/
 RUN chmod +x /usr/local/bin/run
 
 COPY data/ /var/www/
+
+VOLUME ["/var/www"]
 
 EXPOSE 22 80
 CMD ["/usr/local/bin/run"]
